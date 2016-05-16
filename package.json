@@ -1,0 +1,19 @@
+{
+  "name": "vim-mode-plus-plugin-sample",
+  "main": "./lib/main",
+  "version": "0.0.0",
+  "description": "Sample project for package as vim-mode-plus's plugin",
+  "keywords": [],
+  "repository": "https://github.com/t9md/atom-vim-mode-plus-plugin-sample",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=0.174.0 <2.0.0"
+  },
+  "consumedServices": {
+    "vim-mode-plus": {
+      "versions": {
+        "^0.1.0": "consumeVimModePlus"
+      }
+    }
+  }
+}
