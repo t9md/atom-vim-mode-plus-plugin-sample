@@ -6,7 +6,7 @@ module.exports =
 
   deactivate: ->
     @subscriptions.dispose()
-    {@subscriptions, @emitter} = {}
+    {@subscriptions} = {}
 
   subscribe: (args...) ->
     @subscriptions.add args...
