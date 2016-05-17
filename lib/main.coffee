@@ -22,7 +22,7 @@ module.exports =
       moveCursor: (cursor) ->
         cursor.moveUp()
 
-    class MoveDown extends MyMoveUp
+    class MoveDown extends MoveUp
       moveCursor: (cursor) ->
         cursor.moveDown()
 
@@ -32,8 +32,8 @@ module.exports =
     #  - 'vim-mode-plus-user:move-up'
     #  - 'vim-mode-plus-user:move-down'
     @subscribe(
-      MyMoveUp.registerCommand()
-      MyMoveDown.registerCommand()
+      MoveUp.registerCommand()
+      MoveDown.registerCommand()
     )
 
     @subscribe observeVimStates (vimState) =>
