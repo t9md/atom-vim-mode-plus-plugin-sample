@@ -17,25 +17,27 @@ module.exports =
 
     # Add motion commands
     # -------------------------
-    # - 'vim-mode-plus-user:my-move-up'
-    # - 'vim-mode-plus-user:my-move-down'
-    class MyMoveUp extends Motion
+    class MoveUp extends Motion
       @commandPrefix: 'vim-mode-plus-user'
       moveCursor: (cursor) ->
         cursor.moveUp()
 
-    class MyMoveDown extends MyMoveUp
+    class MoveDown extends MyMoveUp
       moveCursor: (cursor) ->
         cursor.moveDown()
 
+    # When you call registerCommand your class name(MoveUp and MoveDown here) is
+    # transformed to dash-case string by prefixing @commandPrefix.
+    # So following two commands are defined.
+    #  - 'vim-mode-plus-user:move-up'
+    #  - 'vim-mode-plus-user:move-down'
     @subscribe(
       MyMoveUp.registerCommand()
       MyMoveDown.registerCommand()
     )
 
     @subscribe observeVimStates (vimState) =>
-      editor = vimState.editor
-      vimState.onDidSetMark ({name, bufferPosition}) =>
+      vimState.onDidSetMark ({name, bufferPosition, editor}) =>
         msg = "Mark '#{name}' on #{bufferPosition.toString()} on #{editor.getPath()}"
         @log(msg)
 
