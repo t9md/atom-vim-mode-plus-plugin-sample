@@ -3,9 +3,9 @@
 This is sample project for package used as [vim-mode-plus](https://atom.io/packages/vim-mode-plus) plugins.
 
 For more information, refer vim-mode-plus's wiki
-- [Create-vmp-plugin](https://github.com/t9md/atom-vim-mode-plus/wiki/Create-vmp-plugin)
-- [Extend-vmp-in-init-file](https://github.com/t9md/atom-vim-mode-plus/wiki/Extend-vmp-in-init-file)
-- [List-of-vmp-plugins](https://github.com/t9md/atom-vim-mode-plus/wiki/List-of-vmp-plugins)
+- [CreateVimModePlusPlugin](https://github.com/t9md/atom-vim-mode-plus/wiki/CreateVimModePlusPlugin)
+- [ExtendVimModePlusInInitFile](https://github.com/t9md/atom-vim-mode-plus/wiki/ExtendVimModePlusInInitFile)
+- [ListOfVimModePlusPlugins](https://github.com/t9md/atom-vim-mode-plus/wiki/ListOfVimModePlusPlugins)
 
 # How to start?
 
